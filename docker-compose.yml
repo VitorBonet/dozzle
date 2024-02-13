@@ -5,8 +5,9 @@ services:
     image: amir20/dozzle:latest
     restart: unless-stopped
     environment:
-      DOZZLE_BASIC_AUTH: "vitorbonet=passwd,vitorbonet2=passwd2"
+      DOZZLE_AUTH_PROVIDER: simple
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
+      - ./data:/data
     ports:
       - 9999:8080
