@@ -4,6 +4,10 @@ services:
     container_name: dozzle
     image: amir20/dozzle:latest
     restart: unless-stopped
+    environment:
+      DOZZLE_AUTH: "1"
+      DOZZLE_USERNAME: "vitorbonet"
+      DOZZLE_PASSWORD: "passwd"
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     ports:
