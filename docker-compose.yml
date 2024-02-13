@@ -5,9 +5,7 @@ services:
     image: amir20/dozzle:latest
     restart: unless-stopped
     environment:
-      DOZZLE_AUTH: "1"
-      DOZZLE_USERNAME: "vitorbonet"
-      DOZZLE_PASSWORD: "passwd"
+      DOZZLE_BASIC_AUTH: "vitorbonet=passwd,vitorbonet2=passwd2"
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     ports:
